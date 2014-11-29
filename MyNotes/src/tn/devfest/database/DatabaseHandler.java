@@ -59,6 +59,16 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         sql += fieldId + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
         sql += fieldName + " TEXT, ";
         sql += fieldContenu + " TEXT ";
+        
+        sql += " ) ";
+        
+        db.execSQL(sql);
+ 
+        sql += "CREATE TABLE " + tableName2;
+        sql += " ( ";
+        sql += fieldId + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
+        sql += fieldName + " TEXT, ";
+        sql += fieldContenu + " TEXT ";
         sql += fieldIdCategory + " INTEGER ";
         sql += fieldDate + " DATE ";
         
@@ -66,6 +76,22 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         
         db.execSQL(sql);
  
+        
+        sql += "CREATE TABLE " + tableName3;
+        sql += " ( ";
+        sql += fieldId + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
+        sql += fieldName + " TEXT, ";
+        sql += fieldContenu + " TEXT ";
+        sql += fieldIdCategory + " INTEGER ";
+        sql += fieldDate + " DATE ";
+        
+        sql += " ) ";
+        
+        db.execSQL(sql);
+ 
+        
+        
+        
     }
  
     // When upgrading the database, it will drop the current table and recreate.
@@ -100,7 +126,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
  
         // use the update command
-        updateSuccessful = db.update(tableName, values, where, whereArgs) > 0;
+        updateSuccessful = db.update(tableName1, values, where, whereArgs) > 0;
         db.close();
  
         return updateSuccessful;
@@ -112,7 +138,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         boolean deleteSuccessful = false;
  
         SQLiteDatabase db = this.getWritableDatabase();
-        deleteSuccessful = db.delete(tableName, "id ='" + id + "'", null) > 0;
+        deleteSuccessful = db.delete(tableName1, "id ='" + id + "'", null) > 0;
         db.close();
  
         return deleteSuccessful;
