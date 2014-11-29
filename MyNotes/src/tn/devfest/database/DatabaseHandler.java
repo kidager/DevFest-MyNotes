@@ -17,11 +17,29 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     protected static final String DATABASE_NAME = "note.db";
  
     // table details
-    public String tableName = "Note";
+    public String tableName1 = "Note";
  
-    public String fieldId = "id";
+    public String fieldId = "id_note";
     public String fieldName = "titre";
     public String fieldContenu = "contenu";
+    public String fieldIdCategory = "id_category";
+    public String fieldDate = "date";
+    
+ 
+    
+    public String tableName2 = "Category";
+    
+    public String fieldCategoryId = "id_category";
+    public String fieldCategoryName = "nom_category";
+    public String fieldCategoryImage = "image_category";
+ 
+ 
+    
+    public String tableName3 = "Media";
+    
+    public String fieldIdMedia = "id_media";
+    public String fieldCheminMedia = "chemin_media";
+    public String fieldMediaNote = "id_note";
  
     
     // constructor
@@ -36,13 +54,16 @@ public class DatabaseHandler extends SQLiteOpenHelper {
  
         String sql = "";
  
-        sql += "CREATE TABLE " + tableName;
+        sql += "CREATE TABLE " + tableName1;
         sql += " ( ";
         sql += fieldId + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
         sql += fieldName + " TEXT, ";
         sql += fieldContenu + " TEXT ";
+        sql += fieldIdCategory + " INTEGER ";
+        sql += fieldDate + " DATE ";
+        
         sql += " ) ";
- 
+        
         db.execSQL(sql);
  
     }
@@ -51,7 +72,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
  
-        String sql = "DROP TABLE IF EXISTS " + tableName;
+        String sql = "DROP TABLE IF EXISTS " + tableName1;
         db.execSQL(sql);
  
         onCreate(db);
