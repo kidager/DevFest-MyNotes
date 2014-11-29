@@ -23,7 +23,6 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //reference to XML toolbar
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         //drawer configuration 
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
