@@ -56,17 +56,17 @@ public class DatabaseHandler extends SQLiteOpenHelper {
  
         sql += "CREATE TABLE " + tableName1;
         sql += " ( ";
-        sql += fieldId + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
-        sql += fieldName + " TEXT, ";
-        sql += fieldContenu + " TEXT ";
+        sql += fieldCategoryId + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
+        sql += fieldCategoryName + " TEXT, ";
+        sql += fieldCategoryImage + " TEXT ";
         
         sql += " ) ";
         
         db.execSQL(sql);
  
-        sql += "CREATE TABLE " + tableName2;
+        sql  = "CREATE TABLE " + tableName2;
         sql += " ( ";
-        sql += fieldId + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
+        sql += fieldIdMedia + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
         sql += fieldName + " TEXT, ";
         sql += fieldContenu + " TEXT ";
         sql += fieldIdCategory + " INTEGER ";
@@ -79,11 +79,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         
         sql += "CREATE TABLE " + tableName3;
         sql += " ( ";
-        sql += fieldId + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
-        sql += fieldName + " TEXT, ";
-        sql += fieldContenu + " TEXT ";
-        sql += fieldIdCategory + " INTEGER ";
-        sql += fieldDate + " DATE ";
+        sql += fieldIdMedia + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
+        sql += fieldCheminMedia + " TEXT, ";
+        sql += fieldMediaNote + " TEXT ";
+
         
         sql += " ) ";
         
@@ -101,6 +100,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String sql = "DROP TABLE IF EXISTS " + tableName1;
         db.execSQL(sql);
  
+        
         onCreate(db);
     }
  
