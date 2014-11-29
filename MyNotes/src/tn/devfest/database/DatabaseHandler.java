@@ -56,9 +56,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
  
         sql += "CREATE TABLE " + tableName1;
         sql += " ( ";
-        sql += fieldCategoryId + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
-        sql += fieldCategoryName + " TEXT, ";
-        sql += fieldCategoryImage + " TEXT ";
+        sql += fieldId + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
+        sql += fieldName + " TEXT, ";
+        sql += fieldContenu + " TEXT ";
+        sql += fieldIdCategory + " INTEGER ";
+        sql += fieldDate + " DATE ";
+        
         
         sql += " ) ";
         
@@ -66,11 +69,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
  
         sql  = "CREATE TABLE " + tableName2;
         sql += " ( ";
-        sql += fieldIdMedia + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
-        sql += fieldName + " TEXT, ";
-        sql += fieldContenu + " TEXT ";
-        sql += fieldIdCategory + " INTEGER ";
-        sql += fieldDate + " DATE ";
+        sql += fieldCategoryId + " INTEGER , ";
+        sql += fieldCategoryName + " TEXT, ";
+        sql += fieldCategoryImage + " TEXT ";
+
         
         sql += " ) ";
         
@@ -79,9 +81,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         
         sql += "CREATE TABLE " + tableName3;
         sql += " ( ";
-        sql += fieldIdMedia + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
+        sql += fieldIdMedia + " INTEGER , ";
         sql += fieldCheminMedia + " TEXT, ";
-        sql += fieldMediaNote + " TEXT ";
+        sql += fieldMediaNote + " INTEGER ";
 
         
         sql += " ) ";
