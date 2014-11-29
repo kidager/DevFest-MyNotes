@@ -1,13 +1,13 @@
 package tn.devfest.mynotes;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.Window;
 import android.widget.ListView;
 
 
@@ -16,13 +16,16 @@ public class MainActivity extends ActionBarActivity {
 	private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     ActionBarDrawerToggle toogle ;
+    Toolbar toolbar ;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //reference to XML toolbar
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+
         //drawer configuration 
-        
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
 
@@ -30,11 +33,10 @@ public class MainActivity extends ActionBarActivity {
         
         mDrawerLayout.setDrawerListener(toogle);
         
-        
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         getSupportActionBar().setHomeButtonEnabled(true);
         
+      
         
     }
 
