@@ -15,6 +15,26 @@ public final class R {
         public static final int abc_slide_in_top=0x7f040003;
         public static final int abc_slide_out_bottom=0x7f040004;
         public static final int abc_slide_out_top=0x7f040005;
+        public static final int appear_bottom_right_in=0x7f040006;
+        public static final int appear_bottom_right_out=0x7f040007;
+        public static final int appear_top_left_in=0x7f040008;
+        public static final int appear_top_left_out=0x7f040009;
+        public static final int disappear_bottom_right_in=0x7f04000a;
+        public static final int disappear_bottom_right_out=0x7f04000b;
+        public static final int disappear_top_left_in=0x7f04000c;
+        public static final int disappear_top_left_out=0x7f04000d;
+        public static final int fade_in=0x7f04000e;
+        public static final int fade_out=0x7f04000f;
+        public static final int flip_horizontal_in=0x7f040010;
+        public static final int flip_horizontal_out=0x7f040011;
+        public static final int flip_vertical_in=0x7f040012;
+        public static final int flip_vertical_out=0x7f040013;
+        public static final int pull_in_left=0x7f040014;
+        public static final int pull_in_right=0x7f040015;
+        public static final int push_out_left=0x7f040016;
+        public static final int push_out_right=0x7f040017;
+        public static final int unzoom_in=0x7f040018;
+        public static final int unzoom_out=0x7f040019;
     }
     public static final class array {
         public static final int colors=0x7f0c0000;
@@ -1795,10 +1815,12 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f09002f;
         public static final int action_mode_bar_stub=0x7f09002e;
         public static final int action_mode_close_button=0x7f090021;
-        public static final int action_settings=0x7f09004b;
+        public static final int action_settings=0x7f09004d;
         public static final int activity_chooser_view_content=0x7f090022;
         public static final int always=0x7f090014;
         public static final int beginning=0x7f09001b;
+        public static final int btn1=0x7f09004a;
+        public static final int btn2=0x7f09004b;
         public static final int checkbox=0x7f09002a;
         public static final int collapseActionView=0x7f090015;
         public static final int content_frame=0x7f090041;
@@ -1829,7 +1851,7 @@ containing a value of this type.
         public static final int never=0x7f090017;
         public static final int none=0x7f09000f;
         public static final int normal=0x7f09000b;
-        public static final int progressBarCircularIndetermininate=0x7f09004a;
+        public static final int progressBarCircularIndetermininate=0x7f09004c;
         public static final int progress_circular=0x7f090007;
         public static final int progress_horizontal=0x7f090008;
         public static final int radio=0x7f09002c;

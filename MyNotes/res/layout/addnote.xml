@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#7986cb" >
     
     
     
@@ -13,6 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Title :"
+        android:textColor="#EEEEEE"
         android:textSize="20sp" />
     
     
@@ -40,6 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Content :"
+        android:textColor="#EEEEEE"
         android:textSize="20sp" />
     
     
@@ -67,6 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Media :"
+        android:textColor="#EEEEEE"
         android:textSize="20sp" />
 
         <LinearLayout
@@ -106,6 +110,7 @@
             android:layout_marginTop="40dp">
             
          <Button
+             android:id="@+id/btn1"
      android:layout_height="wrap_content"
      android:layout_width="wrap_content"
      android:text="Confirm"
@@ -113,10 +118,15 @@
      />
          
           <Button
+              android:id="@+id/btn2"
      android:layout_height="wrap_content"
      android:layout_width="wrap_content"
      android:text="Cancel"
      />
+          
+     
+          
+          
     </LinearLayout>
 
 </LinearLayout>

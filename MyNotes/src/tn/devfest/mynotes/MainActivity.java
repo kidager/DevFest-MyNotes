@@ -1,6 +1,7 @@
 package tn.devfest.mynotes;
 
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -12,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.melnykov.fab.FloatingActionButton;
 
@@ -73,6 +75,8 @@ public class MainActivity extends ActionBarActivity {
 				
 				Intent i = new Intent(MainActivity.this,addNote.class);
 				startActivity(i);
+				overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+
 				
 			}
 		});
