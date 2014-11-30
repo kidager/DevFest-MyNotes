@@ -1,10 +1,8 @@
 package tn.devfest.mynotes;
 
 
-
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
@@ -14,6 +12,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.melnykov.fab.FloatingActionButton;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -29,13 +29,37 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         //reference to XML toolbar
 
+        
         //drawer configuration 
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
-
-        toogle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_drawer_close);
+       
+        
+        toogle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_drawer_close){
+        	@Override
+        	public void onDrawerOpened(View drawerView) {
+        		
+        		 FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
+                 fab.hide();
+                 
+        		super.onDrawerOpened(drawerView);
+        	}
+        	
+        	
+        	@Override
+        	public void onDrawerClosed(View drawerView) {
+        		 FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
+                 fab.show();
+        		super.onDrawerClosed(drawerView);
+        	}
+        };
+        
+        
         
         mDrawerLayout.setDrawerListener(toogle);
+        
+
+        
         
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -53,6 +77,7 @@ public class MainActivity extends ActionBarActivity {
 			}
 		});
  
+    
     }
 
 
