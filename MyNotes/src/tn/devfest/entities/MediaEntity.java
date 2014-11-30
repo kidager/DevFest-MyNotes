@@ -5,10 +5,14 @@ public class MediaEntity {
   private String path;
   private long noteId;
 
-  public MediaEntity(long id, String path, long noteId) {
-    this.id = id;
+  public MediaEntity(String path, long noteId) {
     this.path = path;
     this.noteId = noteId;
+  }
+  
+  public MediaEntity(long id, String path, long noteId) {
+    this(path, noteId);
+    this.id = id;
   }
 
   public long getId() {

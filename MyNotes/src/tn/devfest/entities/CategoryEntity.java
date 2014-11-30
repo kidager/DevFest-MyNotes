@@ -5,10 +5,14 @@ public class CategoryEntity {
   private String name;
   private String image;
 
-  public CategoryEntity(long id, String name, String image) {
-    this.id = id;
+  public CategoryEntity(String name, String image) {
     this.name = name;
     this.image = image;
+  }
+
+  public CategoryEntity(long id, String name, String image) {
+    this(name, image);
+    this.id = id;
   }
 
   public long getId() {

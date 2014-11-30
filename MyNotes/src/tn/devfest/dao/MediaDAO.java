@@ -24,7 +24,7 @@ public class MediaDAO {
 
   public long create(MediaEntity media) {
     ContentValues values = new ContentValues();
-    values.put(DatabaseHelper.getMediaId(), media.getId());
+    // values.put(DatabaseHelper.getMediaId(), media.getId());
     values.put(DatabaseHelper.getMediaPath(), media.getPath());
     values.put(DatabaseHelper.getMediaNoteId(), media.getNoteId());
     return dbAdapter.getDb().insert(DatabaseHelper.getMediaTableName(), null,
@@ -32,7 +32,7 @@ public class MediaDAO {
   }
 
   public boolean update(MediaEntity media) {
-    String where = DatabaseHelper.getMediaTableName() + "=" + media.getId();
+    String where = DatabaseHelper.getMediaId() + "=" + media.getId();
 
     ContentValues values = new ContentValues();
     values.put(DatabaseHelper.getMediaId(), media.getId());

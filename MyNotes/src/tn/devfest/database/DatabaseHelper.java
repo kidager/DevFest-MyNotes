@@ -53,14 +53,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     db.execSQL(sql);
 
     sql = "CREATE TABLE " + categoryTableName + " (";
-    sql += categoryId + " INTEGER, ";
+    sql += categoryId + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
     sql += categoryName + " TEXT, ";
     sql += categoryImage + " TEXT";
     sql += ")";
     db.execSQL(sql);
 
     sql = "CREATE TABLE " + mediaTableName + " (";
-    sql += mediaId + " INTEGER, ";
+    sql += mediaId + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
     sql += mediaPath + " TEXT, ";
     sql += mediaNoteId + " INTEGER";
     sql += ")";

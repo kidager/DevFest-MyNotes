@@ -10,14 +10,18 @@ public class NoteEntity {
   private Timestamp timestamp;
   
   public NoteEntity() {}
-
-  public NoteEntity(long id, String title, String content, long categoryId,
+  
+  public NoteEntity(String title, String content, long categoryId,
       Timestamp timestamp) {
-    this.id = id;
     this.title = title;
     this.content = content;
     this.categoryId = categoryId;
     this.timestamp = timestamp;
+  }
+  
+  public NoteEntity(long id, String title, String content, long categoryId, Timestamp timestamp) {
+    this(title, content, categoryId, timestamp);
+    this.id = id;
   }
 
   public long getId() {

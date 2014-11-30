@@ -24,7 +24,7 @@ public class CategoryDAO {
 
   public long create(CategoryEntity category) {
     ContentValues values = new ContentValues();
-    values.put(DatabaseHelper.getCategoryId(), category.getId());
+    // values.put(DatabaseHelper.getCategoryId(), category.getId());
     values.put(DatabaseHelper.getCategoryName(), category.getName());
     values.put(DatabaseHelper.getCategoryImage(), category.getImage());
     return dbAdapter.getDb().insert(DatabaseHelper.getCategoryTableName(),
@@ -32,7 +32,7 @@ public class CategoryDAO {
   }
 
   public boolean update(CategoryEntity category) {
-    String where = DatabaseHelper.getCategoryTableName() + "="
+    String where = DatabaseHelper.getCategoryId() + "="
         + category.getId();
 
     ContentValues values = new ContentValues();

@@ -27,7 +27,7 @@ public class NoteDAO {
   
   public long create(NoteEntity note) {
     ContentValues values = new ContentValues();
-    values.put(DatabaseHelper.getNoteId(), note.getId());
+    // values.put(DatabaseHelper.getNoteId(), note.getId());
     values.put(DatabaseHelper.getNoteTitle(), note.getTitle());
     values.put(DatabaseHelper.getNoteContent(), note.getContent());
     values.put(DatabaseHelper.getNoteCategoryId(), note.getCategoryId());
@@ -37,7 +37,7 @@ public class NoteDAO {
   }
   
   public boolean update(NoteEntity note) {
-    String where = DatabaseHelper.getNoteTableName() + "=" + note.getId();
+    String where = DatabaseHelper.getNoteId() + "=" + note.getId();
 
     ContentValues values = new ContentValues();
     values.put(DatabaseHelper.getNoteId(), note.getId());
