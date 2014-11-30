@@ -18,7 +18,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int cardBackgroundColor=0x7f010000;
+        public static int cardBackgroundColor=0x7f010000;
         /**  Corner radius for CardView. 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -29,7 +29,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int cardCornerRadius=0x7f010001;
+        public static int cardCornerRadius=0x7f010001;
         /**  Elevation for CardView. 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -40,7 +40,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int cardElevation=0x7f010002;
+        public static int cardElevation=0x7f010002;
         /**  Maximum Elevation for CardView. 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -51,7 +51,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int cardMaxElevation=0x7f010003;
+        public static int cardMaxElevation=0x7f010003;
         /**  Add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners. 
          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
@@ -60,7 +60,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int cardPreventCornerOverlap=0x7f010005;
+        public static int cardPreventCornerOverlap=0x7f010005;
         /**  Add padding in API v21+ as well to have the same measurements with previous versions. 
          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
@@ -69,7 +69,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int cardUseCompatPadding=0x7f010004;
+        public static int cardUseCompatPadding=0x7f010004;
         /**  Inner padding between the edges of the Card and children of the CardView. 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -80,7 +80,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int contentPadding=0x7f010006;
+        public static int contentPadding=0x7f010006;
         /**  Inner padding between the bottom edge of the Card and children of the CardView. 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -91,7 +91,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int contentPaddingBottom=0x7f01000a;
+        public static int contentPaddingBottom=0x7f01000a;
         /**  Inner padding between the left edge of the Card and children of the CardView. 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -102,7 +102,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int contentPaddingLeft=0x7f010007;
+        public static int contentPaddingLeft=0x7f010007;
         /**  Inner padding between the right edge of the Card and children of the CardView. 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -113,7 +113,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int contentPaddingRight=0x7f010008;
+        public static int contentPaddingRight=0x7f010008;
         /**  Inner padding between the top edge of the Card and children of the CardView. 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -124,38 +124,38 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int contentPaddingTop=0x7f010009;
+        public static int contentPaddingTop=0x7f010009;
     }
     public static final class color {
         /**  Background color for dark CardView. 
          */
-        public static final int cardview_dark_background=0x7f020001;
+        public static int cardview_dark_background=0x7f020001;
         /**  Background color for light CardView. 
          */
-        public static final int cardview_light_background=0x7f020000;
+        public static int cardview_light_background=0x7f020000;
         /**  Shadow color for the furthest pixels around CardView. 
          */
-        public static final int cardview_shadow_end_color=0x7f020003;
+        public static int cardview_shadow_end_color=0x7f020003;
         /**  Shadow color for the first pixels around CardView. 
          */
-        public static final int cardview_shadow_start_color=0x7f020002;
+        public static int cardview_shadow_start_color=0x7f020002;
     }
     public static final class dimen {
         /**  Inset shadow for RoundRectDrawableWithShadow. It is used to avoid gaps between the card
      and the shadow. 
          */
-        public static final int cardview_compat_inset_shadow=0x7f030002;
+        public static int cardview_compat_inset_shadow=0x7f030002;
         /**  Elevation value to use for CardViews. Pre-L, it is equal to shadow size. 
          */
-        public static final int cardview_default_elevation=0x7f030001;
+        public static int cardview_default_elevation=0x7f030001;
         /**  Default radius for CardView corners. 
          */
-        public static final int cardview_default_radius=0x7f030000;
+        public static int cardview_default_radius=0x7f030000;
     }
     public static final class style {
-        public static final int CardView=0x7f040000;
-        public static final int CardView_Dark=0x7f040002;
-        public static final int CardView_Light=0x7f040001;
+        public static int CardView=0x7f040000;
+        public static int CardView_Dark=0x7f040002;
+        public static int CardView_Light=0x7f040001;
     }
     public static final class styleable {
         /** Attributes that can be used with a CardView.
@@ -209,7 +209,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name android.support.v7.cardview:cardBackgroundColor
         */
-        public static final int CardView_cardBackgroundColor = 0;
+        public static int CardView_cardBackgroundColor = 0;
         /**
           <p>
           @attr description
@@ -227,7 +227,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name android.support.v7.cardview:cardCornerRadius
         */
-        public static final int CardView_cardCornerRadius = 1;
+        public static int CardView_cardCornerRadius = 1;
         /**
           <p>
           @attr description
@@ -245,7 +245,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name android.support.v7.cardview:cardElevation
         */
-        public static final int CardView_cardElevation = 2;
+        public static int CardView_cardElevation = 2;
         /**
           <p>
           @attr description
@@ -263,7 +263,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name android.support.v7.cardview:cardMaxElevation
         */
-        public static final int CardView_cardMaxElevation = 3;
+        public static int CardView_cardMaxElevation = 3;
         /**
           <p>
           @attr description
@@ -279,7 +279,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name android.support.v7.cardview:cardPreventCornerOverlap
         */
-        public static final int CardView_cardPreventCornerOverlap = 5;
+        public static int CardView_cardPreventCornerOverlap = 5;
         /**
           <p>
           @attr description
@@ -295,7 +295,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name android.support.v7.cardview:cardUseCompatPadding
         */
-        public static final int CardView_cardUseCompatPadding = 4;
+        public static int CardView_cardUseCompatPadding = 4;
         /**
           <p>
           @attr description
@@ -313,7 +313,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name android.support.v7.cardview:contentPadding
         */
-        public static final int CardView_contentPadding = 6;
+        public static int CardView_contentPadding = 6;
         /**
           <p>
           @attr description
@@ -331,7 +331,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name android.support.v7.cardview:contentPaddingBottom
         */
-        public static final int CardView_contentPaddingBottom = 10;
+        public static int CardView_contentPaddingBottom = 10;
         /**
           <p>
           @attr description
@@ -349,7 +349,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name android.support.v7.cardview:contentPaddingLeft
         */
-        public static final int CardView_contentPaddingLeft = 7;
+        public static int CardView_contentPaddingLeft = 7;
         /**
           <p>
           @attr description
@@ -367,7 +367,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name android.support.v7.cardview:contentPaddingRight
         */
-        public static final int CardView_contentPaddingRight = 8;
+        public static int CardView_contentPaddingRight = 8;
         /**
           <p>
           @attr description
@@ -385,6 +385,6 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name android.support.v7.cardview:contentPaddingTop
         */
-        public static final int CardView_contentPaddingTop = 9;
+        public static int CardView_contentPaddingTop = 9;
     };
 }

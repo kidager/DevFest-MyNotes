@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/note_list"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:divider="@android:color/transparent"
+        android:focusable="false" />
+
+</LinearLayout>
