@@ -16,6 +16,12 @@ public final class R {
         public static final int abc_slide_out_bottom=0x7f040004;
         public static final int abc_slide_out_top=0x7f040005;
     }
+    public static final class array {
+        public static final int colors=0x7f0c0000;
+        public static final int gplus_colors=0x7f0c0001;
+        public static final int pocket_background_colors=0x7f0c0003;
+        public static final int pocket_bar_colors=0x7f0c0002;
+    }
     public static final class attr {
         /**  Custom divider drawable to use for elements in the action bar. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
@@ -439,6 +445,65 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int contentInsetStart=0x7f010067;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int cpbStyle=0x7f0100ae;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cpb_color=0x7f0100af;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int cpb_colors=0x7f0100b0;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cpb_max_sweep_angle=0x7f0100b3;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cpb_min_sweep_angle=0x7f0100b2;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cpb_rotation_speed=0x7f0100b5;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cpb_stroke_width=0x7f0100b1;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cpb_sweep_speed=0x7f0100b4;
         /**  Specifies a layout for custom navigation. Overrides navigationMode. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -1422,19 +1487,19 @@ containing a value of this type.
         public static final int abc_config_showMenuShortcutsWhenKeyboardPresent=0x7f050003;
     }
     public static final class color {
-        public static final int abc_background_cache_hint_selector_material_dark=0x7f06003a;
-        public static final int abc_background_cache_hint_selector_material_light=0x7f06003b;
+        public static final int abc_background_cache_hint_selector_material_dark=0x7f060048;
+        public static final int abc_background_cache_hint_selector_material_light=0x7f060049;
         public static final int abc_input_method_navigation_guard=0x7f060003;
-        public static final int abc_primary_text_disable_only_material_dark=0x7f06003c;
-        public static final int abc_primary_text_disable_only_material_light=0x7f06003d;
-        public static final int abc_primary_text_material_dark=0x7f06003e;
-        public static final int abc_primary_text_material_light=0x7f06003f;
-        public static final int abc_search_url_text=0x7f060040;
+        public static final int abc_primary_text_disable_only_material_dark=0x7f06004a;
+        public static final int abc_primary_text_disable_only_material_light=0x7f06004b;
+        public static final int abc_primary_text_material_dark=0x7f06004c;
+        public static final int abc_primary_text_material_light=0x7f06004d;
+        public static final int abc_search_url_text=0x7f06004e;
         public static final int abc_search_url_text_normal=0x7f060000;
         public static final int abc_search_url_text_pressed=0x7f060002;
         public static final int abc_search_url_text_selected=0x7f060001;
-        public static final int abc_secondary_text_material_dark=0x7f060041;
-        public static final int abc_secondary_text_material_light=0x7f060042;
+        public static final int abc_secondary_text_material_dark=0x7f06004f;
+        public static final int abc_secondary_text_material_light=0x7f060050;
         public static final int accent=0x7f060036;
         public static final int accent_material_dark=0x7f06000f;
         public static final int accent_material_light=0x7f06000e;
@@ -1457,10 +1522,15 @@ containing a value of this type.
         public static final int button_material_light=0x7f060011;
         public static final int colorPrimaryDark=0x7f060032;
         public static final int colorprimary=0x7f060031;
+        public static final int cpb_default_color=0x7f060047;
         public static final int dim_foreground_disabled_material_dark=0x7f06001c;
         public static final int dim_foreground_disabled_material_light=0x7f06001d;
         public static final int dim_foreground_material_dark=0x7f06001a;
         public static final int dim_foreground_material_light=0x7f06001b;
+        public static final int gplus_color_1=0x7f06003e;
+        public static final int gplus_color_2=0x7f06003f;
+        public static final int gplus_color_3=0x7f060040;
+        public static final int gplus_color_4=0x7f060041;
         /**  TODO: This is 40% alpha on the default accent color. 
          */
         public static final int highlighted_text_material_dark=0x7f060020;
@@ -1469,6 +1539,11 @@ containing a value of this type.
         public static final int highlighted_text_material_light=0x7f060021;
         public static final int hint_foreground_material_dark=0x7f06001e;
         public static final int hint_foreground_material_light=0x7f06001f;
+        public static final int holo_blue_dark=0x7f060042;
+        public static final int holo_green_dark=0x7f060044;
+        public static final int holo_purple_dark=0x7f060045;
+        public static final int holo_red_dark=0x7f060046;
+        public static final int holo_yellow_dark=0x7f060043;
         public static final int link_text_material_dark=0x7f060022;
         public static final int link_text_material_light=0x7f060023;
         public static final int material_blue_500=0x7f060038;
@@ -1478,6 +1553,10 @@ containing a value of this type.
         public static final int material_blue_grey_950=0x7f060030;
         public static final int material_deep_teal_200=0x7f06002c;
         public static final int material_deep_teal_500=0x7f06002d;
+        public static final int pocket_color_1=0x7f06003a;
+        public static final int pocket_color_2=0x7f06003b;
+        public static final int pocket_color_3=0x7f06003c;
+        public static final int pocket_color_4=0x7f06003d;
         public static final int primary=0x7f060033;
         public static final int primary_dark_material_dark=0x7f06000a;
         public static final int primary_dark_material_light=0x7f06000b;
@@ -1598,8 +1677,9 @@ containing a value of this type.
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f07002b;
-        public static final int activity_vertical_margin=0x7f07002c;
+        public static final int activity_horizontal_margin=0x7f07002c;
+        public static final int activity_vertical_margin=0x7f07002d;
+        public static final int cpb_default_stroke_width=0x7f07002b;
         /**  The platform's desired fixed height for a dialog along the major axis
          (the screen is in portrait). This may be either a fraction or a dimension.
  The platform's desired fixed height for a dialog along the major axis
@@ -1634,11 +1714,11 @@ containing a value of this type.
         public static final int dialog_fixed_width_minor=0x7f07000d;
         public static final int disabled_alpha_material_dark=0x7f070001;
         public static final int disabled_alpha_material_light=0x7f070000;
-        public static final int fab_elevation_lollipop=0x7f070031;
-        public static final int fab_scroll_threshold=0x7f070030;
-        public static final int fab_shadow_size=0x7f07002f;
-        public static final int fab_size_mini=0x7f07002e;
-        public static final int fab_size_normal=0x7f07002d;
+        public static final int fab_elevation_lollipop=0x7f070032;
+        public static final int fab_scroll_threshold=0x7f070031;
+        public static final int fab_shadow_size=0x7f070030;
+        public static final int fab_size_mini=0x7f07002f;
+        public static final int fab_size_normal=0x7f07002e;
     }
     public static final class drawable {
         public static final int abc_ab_share_pack_holo_dark=0x7f020000;
@@ -1711,7 +1791,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f09002f;
         public static final int action_mode_bar_stub=0x7f09002e;
         public static final int action_mode_close_button=0x7f090021;
-        public static final int action_settings=0x7f090044;
+        public static final int action_settings=0x7f090045;
         public static final int activity_chooser_view_content=0x7f090022;
         public static final int always=0x7f090014;
         public static final int beginning=0x7f09001b;
@@ -1742,6 +1822,7 @@ containing a value of this type.
         public static final int never=0x7f090017;
         public static final int none=0x7f09000f;
         public static final int normal=0x7f09000b;
+        public static final int progressBarCircularIndetermininate=0x7f090044;
         public static final int progress_circular=0x7f090007;
         public static final int progress_horizontal=0x7f090008;
         public static final int radio=0x7f09002c;
@@ -1792,6 +1873,8 @@ containing a value of this type.
          showAsAction="ifRoom" items can fit. "always" items can override this. 
          */
         public static final int abc_max_action_buttons=0x7f080000;
+        public static final int cpb_default_max_sweep_angle=0x7f080002;
+        public static final int cpb_default_min_sweep_angle=0x7f080001;
     }
     public static final class layout {
         public static final int abc_action_bar_title_item=0x7f030000;
@@ -1818,10 +1901,11 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030015;
         public static final int abc_simple_dropdown_hint=0x7f030016;
         public static final int activity_main=0x7f030017;
-        public static final int support_simple_spinner_dropdown_item=0x7f030018;
+        public static final int splash=0x7f030018;
+        public static final int support_simple_spinner_dropdown_item=0x7f030019;
     }
     public static final class menu {
-        public static final int main=0x7f0c0000;
+        public static final int main=0x7f0d0000;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1880,11 +1964,13 @@ containing a value of this type.
         /**  Content description for the Toolbar icon used to collapse an expanded action mode. [CHAR LIMIT=NONE] 
          */
         public static final int abc_toolbar_collapse_description=0x7f0a0004;
-        public static final int action_settings=0x7f0a0012;
-        public static final int app_name=0x7f0a0010;
-        public static final int drawer_drawer_close=0x7f0a0014;
-        public static final int drawer_open=0x7f0a0013;
-        public static final int hello_world=0x7f0a0011;
+        public static final int action_settings=0x7f0a0014;
+        public static final int app_name=0x7f0a0012;
+        public static final int cpb_default_rotation_speed=0x7f0a0011;
+        public static final int cpb_default_sweep_speed=0x7f0a0010;
+        public static final int drawer_drawer_close=0x7f0a0016;
+        public static final int drawer_open=0x7f0a0015;
+        public static final int hello_world=0x7f0a0013;
     }
     public static final class style {
         /** 
@@ -2047,6 +2133,7 @@ containing a value of this type.
     
          */
         public static final int Base_Widget_AppCompat_Toolbar_Button_Navigation=0x7f0b0090;
+        public static final int CircularProgressBar=0x7f0b00ee;
         public static final int Platform_AppCompat=0x7f0b00c9;
         public static final int Platform_AppCompat_Dialog=0x7f0b00cb;
         public static final int Platform_AppCompat_Light=0x7f0b00ca;
@@ -2135,6 +2222,7 @@ containing a value of this type.
         public static final int Theme_AppCompat_Light_DialogWhenLarge=0x7f0b00c0;
         public static final int Theme_AppCompat_Light_NoActionBar=0x7f0b00be;
         public static final int Theme_AppCompat_NoActionBar=0x7f0b00bd;
+        public static final int Theme_SmoothProgressBarDefaults=0x7f0b00ed;
         public static final int ThemeOverlay_AppCompat=0x7f0b00c4;
         /**  Theme overlay that replaces the normal control color, which by default is the same as the
          secondary text color, with the primary text color. 
@@ -2909,6 +2997,141 @@ containing a value of this type.
           @attr name tn.devfest.mynotes:initialActivityCount
         */
         public static final int ActivityChooserView_initialActivityCount = 0;
+        /** Attributes that can be used with a CircularProgressBar.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CircularProgressBar_cpbStyle tn.devfest.mynotes:cpbStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularProgressBar_cpb_color tn.devfest.mynotes:cpb_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularProgressBar_cpb_colors tn.devfest.mynotes:cpb_colors}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularProgressBar_cpb_max_sweep_angle tn.devfest.mynotes:cpb_max_sweep_angle}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularProgressBar_cpb_min_sweep_angle tn.devfest.mynotes:cpb_min_sweep_angle}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularProgressBar_cpb_rotation_speed tn.devfest.mynotes:cpb_rotation_speed}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularProgressBar_cpb_stroke_width tn.devfest.mynotes:cpb_stroke_width}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircularProgressBar_cpb_sweep_speed tn.devfest.mynotes:cpb_sweep_speed}</code></td><td></td></tr>
+           </table>
+           @see #CircularProgressBar_cpbStyle
+           @see #CircularProgressBar_cpb_color
+           @see #CircularProgressBar_cpb_colors
+           @see #CircularProgressBar_cpb_max_sweep_angle
+           @see #CircularProgressBar_cpb_min_sweep_angle
+           @see #CircularProgressBar_cpb_rotation_speed
+           @see #CircularProgressBar_cpb_stroke_width
+           @see #CircularProgressBar_cpb_sweep_speed
+         */
+        public static final int[] CircularProgressBar = {
+            0x7f0100ae, 0x7f0100af, 0x7f0100b0, 0x7f0100b1,
+            0x7f0100b2, 0x7f0100b3, 0x7f0100b4, 0x7f0100b5
+        };
+        /**
+          <p>This symbol is the offset where the {@link tn.devfest.mynotes.R.attr#cpbStyle}
+          attribute's value can be found in the {@link #CircularProgressBar} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name tn.devfest.mynotes:cpbStyle
+        */
+        public static final int CircularProgressBar_cpbStyle = 0;
+        /**
+          <p>This symbol is the offset where the {@link tn.devfest.mynotes.R.attr#cpb_color}
+          attribute's value can be found in the {@link #CircularProgressBar} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name tn.devfest.mynotes:cpb_color
+        */
+        public static final int CircularProgressBar_cpb_color = 1;
+        /**
+          <p>This symbol is the offset where the {@link tn.devfest.mynotes.R.attr#cpb_colors}
+          attribute's value can be found in the {@link #CircularProgressBar} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name tn.devfest.mynotes:cpb_colors
+        */
+        public static final int CircularProgressBar_cpb_colors = 2;
+        /**
+          <p>This symbol is the offset where the {@link tn.devfest.mynotes.R.attr#cpb_max_sweep_angle}
+          attribute's value can be found in the {@link #CircularProgressBar} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name tn.devfest.mynotes:cpb_max_sweep_angle
+        */
+        public static final int CircularProgressBar_cpb_max_sweep_angle = 5;
+        /**
+          <p>This symbol is the offset where the {@link tn.devfest.mynotes.R.attr#cpb_min_sweep_angle}
+          attribute's value can be found in the {@link #CircularProgressBar} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name tn.devfest.mynotes:cpb_min_sweep_angle
+        */
+        public static final int CircularProgressBar_cpb_min_sweep_angle = 4;
+        /**
+          <p>This symbol is the offset where the {@link tn.devfest.mynotes.R.attr#cpb_rotation_speed}
+          attribute's value can be found in the {@link #CircularProgressBar} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name tn.devfest.mynotes:cpb_rotation_speed
+        */
+        public static final int CircularProgressBar_cpb_rotation_speed = 7;
+        /**
+          <p>This symbol is the offset where the {@link tn.devfest.mynotes.R.attr#cpb_stroke_width}
+          attribute's value can be found in the {@link #CircularProgressBar} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name tn.devfest.mynotes:cpb_stroke_width
+        */
+        public static final int CircularProgressBar_cpb_stroke_width = 3;
+        /**
+          <p>This symbol is the offset where the {@link tn.devfest.mynotes.R.attr#cpb_sweep_speed}
+          attribute's value can be found in the {@link #CircularProgressBar} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name tn.devfest.mynotes:cpb_sweep_speed
+        */
+        public static final int CircularProgressBar_cpb_sweep_speed = 6;
         /** Attributes that can be used with a CompatTextView.
            <p>Includes the following attributes:</p>
            <table>
