@@ -43,27 +43,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
   public void onCreate(SQLiteDatabase db) {
     String sql = "";
 
-    sql += "CREATE TABLE " + noteTableName + " (";
+    sql = "CREATE TABLE IF NOT EXISTS " + categoryTableName + " (";
+    sql += categoryId + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
+    sql += categoryName + " TEXT, ";
+    sql += categoryImage + " TEXT";
+    sql += ");";
+    db.execSQL(sql);
+
+    sql = "CREATE TABLE IF NOT EXISTS " + noteTableName + " (";
     sql += noteId + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
     sql += noteTitle + " TEXT, ";
     sql += noteContent + " TEXT, ";
     sql += noteCategoryId + " INTEGER, ";
     sql += noteTimestamp + " TIMESTAMP DEFAULT CURRENT_TIMESTAMP";
-    sql += ")";
+    sql += ");";
     db.execSQL(sql);
 
-    sql = "CREATE TABLE " + categoryTableName + " (";
-    sql += categoryId + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
-    sql += categoryName + " TEXT, ";
-    sql += categoryImage + " TEXT";
-    sql += ")";
-    db.execSQL(sql);
-
-    sql = "CREATE TABLE " + mediaTableName + " (";
+    sql = "CREATE TABLE IF NOT EXISTS " + mediaTableName + " (";
     sql += mediaId + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
     sql += mediaPath + " TEXT, ";
     sql += mediaNoteId + " INTEGER";
-    sql += ")";
+    sql += ");";
+    db.execSQL(sql);
+    
+    sql = "INSERT INTO " + categoryTableName + " VALUES (1, 'General', NULL);";
     db.execSQL(sql);
   }
 

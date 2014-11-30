@@ -6,7 +6,6 @@
     tools:context="com.example.abc.MainActivity" >
 
     <RelativeLayout
-       
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
@@ -20,7 +19,26 @@
             <FrameLayout
                 android:id="@+id/content_frame"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent" >
+
+                <android.support.v4.view.ViewPager
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <android.support.v4.view.PagerTabStrip
+                        android:id="@+id/pagerTabStrip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:background="#3f51b5"
+                        android:elevation="7dp"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="#fff" />
+                </android.support.v4.view.ViewPager>
+            </FrameLayout>
             <!-- The navigation drawer -->
 
             <ListView
@@ -28,24 +46,23 @@
                 android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
-                android:background="#111"
+                android:background="#5c6bc0"
                 android:choiceMode="singleChoice"
                 android:divider="@android:color/transparent"
                 android:dividerHeight="0dp" />
-
         </android.support.v4.widget.DrawerLayout>
     </RelativeLayout>
 
-   
-
-     <com.melnykov.fab.FloatingActionButton
+    <com.melnykov.fab.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
         android:layout_margin="16dp"
+        android:onClick="actionButtonClick"
         android:src="@drawable/ic_add_white_24dp"
         fab:fab_colorNormal="@color/accent"
         fab:fab_colorPressed="@color/accent_pressed"
-        fab:fab_colorRipple="@color/ripple"/>
+        fab:fab_colorRipple="@color/ripple" />
+
 </FrameLayout>

@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="16"
+        android:minSdkVersion="19"
         android:targetSdkVersion="21" />
 
     <application
@@ -14,27 +14,29 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".Splash"
+            android:name=".SplashActivity"
             android:label="@string/app_name" >
-             <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-         <activity
-                android:name="tn.devfest.mynotes.MainActivity"
-                >
+        <activity android:name="tn.devfest.mynotes.MainActivity" >
+        </activity>
+        <activity android:name="tn.devfest.mynotes.AddNoteActivity" >
         </activity>
         
-         <activity
-                android:name="tn.devfest.mynotes.addNote"
-                >
+         <activity android:name="tn.devfest.mynotes.ShowNoteActivity" >
         </activity>
         
-         
          
     </application>
+    
+    <uses-permission 
+      android:name="android.permission.RECORD_AUDIO" />
+    
+    
+    
 
 </manifest>

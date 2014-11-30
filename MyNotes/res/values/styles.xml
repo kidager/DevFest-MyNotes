@@ -2,12 +2,10 @@
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    -->
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.    -->
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-		<item name="colorPrimary">@color/colorprimary</item>
-    	<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        
+        <item name="colorPrimary">@color/colorprimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     </style>
 
     <!-- Application theme. -->
@@ -15,7 +13,7 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
-      <style name="Theme.SmoothProgressBarDefaults" parent="android:Theme.Holo">
+    <style name="Theme.SmoothProgressBarDefaults" parent="android:Theme.Holo">
         <item name="cpbStyle">@style/CircularProgressBar</item>
     </style>
 
@@ -27,7 +25,5 @@
         <item name="cpb_sweep_speed">@string/cpb_default_sweep_speed</item>
         <item name="cpb_rotation_speed">@string/cpb_default_rotation_speed</item>
     </style>
-    
-    
-    
+
 </resources>

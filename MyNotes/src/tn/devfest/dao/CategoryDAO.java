@@ -25,7 +25,7 @@ public class CategoryDAO {
   public long create(CategoryEntity category) {
     ContentValues values = new ContentValues();
     // values.put(DatabaseHelper.getCategoryId(), category.getId());
-    values.put(DatabaseHelper.getCategoryName(), category.getName());
+    values.put(DatabaseHelper.getCategoryName(), category.getName().replace("'", "''"));
     values.put(DatabaseHelper.getCategoryImage(), category.getImage());
     return dbAdapter.getDb().insert(DatabaseHelper.getCategoryTableName(),
         null, values);
@@ -37,14 +37,13 @@ public class CategoryDAO {
 
     ContentValues values = new ContentValues();
     values.put(DatabaseHelper.getCategoryId(), category.getId());
-    values.put(DatabaseHelper.getCategoryName(), category.getName());
+    values.put(DatabaseHelper.getCategoryName(), category.getName().replace("'", "''"));
     values.put(DatabaseHelper.getCategoryImage(), category.getImage());
     return dbAdapter.getDb().update(DatabaseHelper.getCategoryTableName(),
         values, where, null) != 0;
   }
 
   public boolean delete(CategoryEntity category) {
-    // TODO: Delete all the notes in the category
     return dbAdapter.getDb().delete(DatabaseHelper.getCategoryTableName(),
         DatabaseHelper.getCategoryId() + "=" + category.getId(), null) != 0;
   }
@@ -60,6 +59,22 @@ public class CategoryDAO {
             c.getLong(c.getColumnIndex(DatabaseHelper.getCategoryId())),
             c.getString(c.getColumnIndex(DatabaseHelper.getCategoryName())),
             c.getString(c.getColumnIndex(DatabaseHelper.getCategoryImage()))));
+      } while (c.moveToNext());
+    }
+    return list;
+  }
+  
+  public List<String> getAllAsString() {
+    ArrayList<String> list = new ArrayList<String>();
+    Cursor c = dbAdapter.getDb().query(true,
+        DatabaseHelper.getCategoryTableName(), null, null, null, null, null,
+        null, null);
+    if (c != null && c.moveToFirst()) {
+      do {
+        list.add(new CategoryEntity(
+            c.getLong(c.getColumnIndex(DatabaseHelper.getCategoryId())),
+            c.getString(c.getColumnIndex(DatabaseHelper.getCategoryName())),
+            c.getString(c.getColumnIndex(DatabaseHelper.getCategoryImage()))).toString());
       } while (c.moveToNext());
     }
     return list;
@@ -84,6 +99,6 @@ public class CategoryDAO {
   }
 
   public CategoryEntity searchByName(String name) {
-    return getWhere(DatabaseHelper.getCategoryName() + "LIKE %" + name + "%");
+    return getWhere(DatabaseHelper.getCategoryName() + "LIKE %" + name.replace("'", "''") + "%");
   }
 }

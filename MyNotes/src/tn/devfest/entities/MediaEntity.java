@@ -15,6 +15,8 @@ public class MediaEntity {
     this.id = id;
   }
 
+  public MediaEntity() { }
+
   public long getId() {
     return id;
   }

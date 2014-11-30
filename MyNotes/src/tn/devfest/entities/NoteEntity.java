@@ -1,8 +1,9 @@
 package tn.devfest.entities;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
-public class NoteEntity {
+public class NoteEntity implements Serializable {
   private long id;
   private String title;
   private String content;

@@ -9,6 +9,10 @@ public class CategoryEntity {
     this.name = name;
     this.image = image;
   }
+  
+  public String toString() {
+    return this.name;
+  }
 
   public CategoryEntity(long id, String name, String image) {
     this(name, image);

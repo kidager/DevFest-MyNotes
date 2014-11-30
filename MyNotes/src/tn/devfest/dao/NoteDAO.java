@@ -28,8 +28,8 @@ public class NoteDAO {
   public long create(NoteEntity note) {
     ContentValues values = new ContentValues();
     // values.put(DatabaseHelper.getNoteId(), note.getId());
-    values.put(DatabaseHelper.getNoteTitle(), note.getTitle());
-    values.put(DatabaseHelper.getNoteContent(), note.getContent());
+    values.put(DatabaseHelper.getNoteTitle(), note.getTitle().replace("'", "''"));
+    values.put(DatabaseHelper.getNoteContent(), note.getContent().replace("'", "''"));
     values.put(DatabaseHelper.getNoteCategoryId(), note.getCategoryId());
     values.put(DatabaseHelper.getNoteTimestamp(), note.getTimestamp().getTime());
     
@@ -41,8 +41,8 @@ public class NoteDAO {
 
     ContentValues values = new ContentValues();
     values.put(DatabaseHelper.getNoteId(), note.getId());
-    values.put(DatabaseHelper.getNoteTitle(), note.getTitle());
-    values.put(DatabaseHelper.getNoteContent(), note.getContent());
+    values.put(DatabaseHelper.getNoteTitle(), note.getTitle().replace("'", "''"));
+    values.put(DatabaseHelper.getNoteContent(), note.getContent().replace("'", "''"));
     values.put(DatabaseHelper.getNoteCategoryId(), note.getCategoryId());
     values.put(DatabaseHelper.getNoteTimestamp(), note.getTimestamp().getTime());
 
@@ -61,7 +61,7 @@ public class NoteDAO {
       do {
         list.add(new NoteEntity(
             c.getLong(c.getColumnIndex(DatabaseHelper.getNoteId())),
-            DatabaseHelper.getNoteTitle(),
+            c.getString(c.getColumnIndex(DatabaseHelper.getNoteTitle())),
             c.getString(c.getColumnIndex(DatabaseHelper.getNoteContent())),
             c.getLong(c.getColumnIndex(DatabaseHelper.getNoteCategoryId())), 
             new Timestamp(c.getLong(c.getColumnIndex(DatabaseHelper.getNoteTimestamp())))));
@@ -76,7 +76,7 @@ public class NoteDAO {
     if (c != null && c.moveToFirst()) {
       note = new NoteEntity(
             c.getLong(c.getColumnIndex(DatabaseHelper.getNoteId())),
-            DatabaseHelper.getNoteTitle(),
+            c.getString(c.getColumnIndex(DatabaseHelper.getNoteTitle())),
             c.getString(c.getColumnIndex(DatabaseHelper.getNoteContent())),
             c.getLong(c.getColumnIndex(DatabaseHelper.getNoteCategoryId())), 
             new Timestamp(c.getLong(c.getColumnIndex(DatabaseHelper.getNoteTimestamp()))));
@@ -89,11 +89,11 @@ public class NoteDAO {
   }
   
   public NoteEntity searchByTitle(String title) {
-    return getWhere(DatabaseHelper.getNoteTitle() + "LIKE %" + title + "%");
+    return getWhere(DatabaseHelper.getNoteTitle() + "LIKE %" + title.replace("'", "''") + "%");
   }
   
   public NoteEntity searchByContent(String content) {
-    return getWhere(DatabaseHelper.getNoteContent() + "LIKE %" + content + "%");
+    return getWhere(DatabaseHelper.getNoteContent() + "LIKE %" + content.replace("'", "''") + "%");
   }
 
 }
