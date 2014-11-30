@@ -1774,8 +1774,10 @@ containing a value of this type.
         public static final int abc_textfield_search_material=0x7f020032;
         public static final int ic_add_white_24dp=0x7f020033;
         public static final int ic_launcher=0x7f020034;
-        public static final int shadow=0x7f020035;
-        public static final int shadow_mini=0x7f020036;
+        public static final int nt=0x7f020035;
+        public static final int shadow=0x7f020036;
+        public static final int shadow_mini=0x7f020037;
+        public static final int w=0x7f020038;
     }
     public static final class id {
         public static final int action_bar=0x7f090032;
@@ -1791,7 +1793,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f09002f;
         public static final int action_mode_bar_stub=0x7f09002e;
         public static final int action_mode_close_button=0x7f090021;
-        public static final int action_settings=0x7f090045;
+        public static final int action_settings=0x7f090046;
         public static final int activity_chooser_view_content=0x7f090022;
         public static final int always=0x7f090014;
         public static final int beginning=0x7f09001b;
@@ -1822,7 +1824,7 @@ containing a value of this type.
         public static final int never=0x7f090017;
         public static final int none=0x7f09000f;
         public static final int normal=0x7f09000b;
-        public static final int progressBarCircularIndetermininate=0x7f090044;
+        public static final int progressBarCircularIndetermininate=0x7f090045;
         public static final int progress_circular=0x7f090007;
         public static final int progress_horizontal=0x7f090008;
         public static final int radio=0x7f09002c;
@@ -1843,6 +1845,7 @@ containing a value of this type.
         public static final int split_action_bar=0x7f090004;
         public static final int submit_area=0x7f09003d;
         public static final int tabMode=0x7f09000c;
+        public static final int textView1=0x7f090044;
         public static final int title=0x7f090028;
         public static final int up=0x7f090001;
         public static final int useLogo=0x7f090013;
