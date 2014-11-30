@@ -62,10 +62,28 @@ public class MediaDAO {
     }
     return list;
   }
+  
+  public List<MediaEntity> getAllForNoteId(long noteId) {
+    String where = DatabaseHelper.getMediaNoteId() + "=" + noteId;
+    ArrayList<MediaEntity> list = new ArrayList<MediaEntity>();
+    Cursor c = dbAdapter.getDb().query(true, DatabaseHelper.getMediaTableName(),
+        null, where, null, null, null, null, null);
+    if (c != null && c.moveToFirst()) {
+      do {
+        list.add(
+            new MediaEntity(
+                c.getLong(c.getColumnIndex(DatabaseHelper.getMediaId())),
+                c.getString(c.getColumnIndex(DatabaseHelper.getMediaPath())),
+                c.getLong(c.getColumnIndex(DatabaseHelper.getMediaNoteId()))));
+      } while (c.moveToNext());
+    }
+    return list;
+  }
+
 
   private MediaEntity getWhere(String where) {
     MediaEntity media = null;
-    Cursor c = dbAdapter.getDb().query(true, DatabaseHelper.getNoteTableName(),
+    Cursor c = dbAdapter.getDb().query(true, DatabaseHelper.getMediaTableName(),
         null, where, null, null, null, null, null);
     if (c != null && c.moveToFirst()) {
       media = new MediaEntity(
@@ -77,14 +95,6 @@ public class MediaDAO {
   }
 
   public MediaEntity getById(long id) {
-    return getWhere(DatabaseHelper.getNoteId() + "=" + id);
-  }
-
-  public MediaEntity searchByTitle(String title) {
-    return getWhere(DatabaseHelper.getNoteTitle() + "LIKE %" + title + "%");
-  }
-
-  public MediaEntity searchByContent(String content) {
-    return getWhere(DatabaseHelper.getNoteContent() + "LIKE %" + content + "%");
+    return getWhere(DatabaseHelper.getMediaId() + "=" + id);
   }
 }
