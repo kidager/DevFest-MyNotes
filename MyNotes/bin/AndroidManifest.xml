@@ -28,6 +28,11 @@
                 >
         </activity>
         
+         <activity
+                android:name="tn.devfest.mynotes.addNote"
+                >
+        </activity>
+        
          
          
     </application>
