@@ -44,6 +44,7 @@ public class CategoryDAO {
   }
 
   public boolean delete(CategoryEntity category) {
+    // TODO: Delete all the notes in the category
     return dbAdapter.getDb().delete(DatabaseHelper.getCategoryTableName(),
         DatabaseHelper.getCategoryId() + "=" + category.getId(), null) != 0;
   }

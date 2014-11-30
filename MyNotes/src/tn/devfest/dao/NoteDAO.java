@@ -50,6 +50,7 @@ public class NoteDAO {
   }
   
   public boolean delete(NoteEntity note) {
+    // TODO: Delete all the medias in the note
     return dbAdapter.getDb().delete(DatabaseHelper.getNoteTableName(), DatabaseHelper.getNoteId() + "=" + note.getId(), null) != 0;
   }
     
