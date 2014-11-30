@@ -6,15 +6,17 @@ public class NoteEntity {
   private long id;
   private String title;
   private String content;
-  private long groupId;
+  private long categoryId;
   private Timestamp timestamp;
+  
+  public NoteEntity() {}
 
-  public NoteEntity(long id, String title, String content, long groupId,
+  public NoteEntity(long id, String title, String content, long categoryId,
       Timestamp timestamp) {
     this.id = id;
     this.title = title;
     this.content = content;
-    this.groupId = groupId;
+    this.categoryId = categoryId;
     this.timestamp = timestamp;
   }
 
@@ -42,12 +44,12 @@ public class NoteEntity {
     this.content = content;
   }
 
-  public long getGroupId() {
-    return groupId;
+  public long getCategoryId() {
+    return categoryId;
   }
 
-  public void setGroupId(long groupId) {
-    this.groupId = groupId;
+  public void setCategoryId(long categoryId) {
+    this.categoryId = categoryId;
   }
 
   public Timestamp getTimestamp() {
