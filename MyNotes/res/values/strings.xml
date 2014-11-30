@@ -4,10 +4,7 @@
     <string name="app_name">My Notes</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-<<<<<<< HEAD
-=======
     <string name="drawer_open">open</string>
     <string name="drawer_drawer_close">close</string>
->>>>>>> refs/remotes/origin/master
 
 </resources>
