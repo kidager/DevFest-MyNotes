@@ -33,6 +33,8 @@ public class AddNoteActivity extends ActionBarActivity {
 
   private NoteEntity note;
   private MediaEntity media;
+  
+  private Bundle extras;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +45,7 @@ public class AddNoteActivity extends ActionBarActivity {
     getSupportActionBar().setBackgroundDrawable(
         new ColorDrawable(Color.parseColor("#3f51b5")));
     getSupportActionBar().setTitle("Add new note");
-
+    
     nDAO = new NoteDAO(getApplicationContext());
     mDAO = new MediaDAO(getApplicationContext());
     note = new NoteEntity();
@@ -51,6 +53,15 @@ public class AddNoteActivity extends ActionBarActivity {
 
     addTitle = (EditText) findViewById(R.id.note_add_title);
     addContent = (EditText) findViewById(R.id.note_add_content);
+    
+    extras = getIntent().getExtras();
+
+    if (extras != null && getIntent().getSerializableExtra("note") != null) {
+      note = (NoteEntity) getIntent().getSerializableExtra("note");
+      addTitle.setText(note.getTitle());
+      addContent.setText(note.getContent());
+    }    
+
   }
   
   @Override
@@ -101,7 +112,11 @@ public class AddNoteActivity extends ActionBarActivity {
       note.setTimestamp(new Timestamp(new Date().getTime()));
       media.setNoteId(note.getId());
 
-      nDAO.create(note);
+      if (extras != null && extras.getSerializable("note") != null) {
+        nDAO.update(note);
+      } else {
+        nDAO.create(note);
+      }
       mDAO.create(media);
 
       nDAO.close();

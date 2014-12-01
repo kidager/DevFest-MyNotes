@@ -1948,12 +1948,16 @@ containing a value of this type.
         public static final int ic_add_white_24dp=0x7f02003a;
         public static final int ic_launcher=0x7f02003b;
         public static final int icn_button=0x7f02003c;
-        public static final int icn_progress=0x7f02003d;
-        public static final int icn_switch=0x7f02003e;
-        public static final int icn_widget=0x7f02003f;
-        public static final int m=0x7f020040;
-        public static final int shadow=0x7f020041;
-        public static final int shadow_mini=0x7f020042;
+        public static final int icn_delete=0x7f02003d;
+        public static final int icn_edit=0x7f02003e;
+        public static final int icn_note=0x7f02003f;
+        public static final int icn_progress=0x7f020040;
+        public static final int icn_share=0x7f020041;
+        public static final int icn_switch=0x7f020042;
+        public static final int icn_widget=0x7f020043;
+        public static final int m=0x7f020044;
+        public static final int shadow=0x7f020045;
+        public static final int shadow_mini=0x7f020046;
     }
     public static final class id {
         public static final int action_bar=0x7f0a0032;

@@ -129,6 +129,8 @@ public class MainActivity extends ActionBarActivity implements
       break;
     case 2:
     case 3:
+    case 6: 
+    case 7:
       Toast.makeText(
           getApplicationContext(),
           Math.random() < 0.5 ? "Not yet available, we didn't had enough time"
@@ -163,11 +165,6 @@ public class MainActivity extends ActionBarActivity implements
       });
       alert.show();
       break;
-    case 6:
-      // rename cat
-      break;
-    case 7:
-      // Del Cat
 
     default:
       break;

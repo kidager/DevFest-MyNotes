@@ -41,7 +41,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="28dp"
-            android:src="@drawable/icn_button" />
+            android:src="@drawable/icn_note" />
 
     </RelativeLayout>
 
@@ -77,14 +77,14 @@
             android:layout_height="40dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="32dp"
-            android:src="@drawable/icn_button" />
+            android:src="@drawable/icn_share" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="104dp"
-            android:text="Partager" />
+            android:text="Share" />
     </com.gc.materialdesign.views.LayoutRipple>
 
     <com.gc.materialdesign.views.LayoutRipple
@@ -92,6 +92,7 @@
         android:layout_width="fill_parent"
         android:layout_height="64dp"
         android:background="#FFF"
+        android:onClick="editNote"
         android:clickable="true" >
 
         <ImageView
@@ -99,14 +100,14 @@
             android:layout_height="40dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="32dp"
-            android:src="@drawable/icn_switch" />
+            android:src="@drawable/icn_edit" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="104dp"
-            android:text="Modifier" />
+            android:text="Edit" />
     </com.gc.materialdesign.views.LayoutRipple>
     
         <com.gc.materialdesign.views.LayoutRipple
@@ -114,6 +115,7 @@
         android:layout_width="fill_parent"
         android:layout_height="64dp"
         android:background="#FFF"
+        android:onClick="deleteNote"
         android:clickable="true" >
 
         <ImageView
@@ -121,14 +123,14 @@
             android:layout_height="40dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="32dp"
-            android:src="@drawable/icn_switch" />
+            android:src="@drawable/icn_delete" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="104dp"
-            android:text="Supprimer" />
+            android:text="Delete" />
     </com.gc.materialdesign.views.LayoutRipple>
 
 </LinearLayout>
